@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>catchButton</title>
+</head>
+<style>
+    body{
+        height: 100vh;
+        overflow: hidden;
+        background: #000;
+    }
+    button{
+        height: 40px;
+        width: 100px;
+        background: #ffff;
+        margin: 20px;
+        transition: all 0.1s linear;
+        font-size: larger;
+        font-weight: 500;
+    }
+    .btnDiv{
+        height:100px ;
+        width: 150px;
+    }
+</style>
+<body>
+    <div id="btnDiv">
+    <button id="btn">Catch-Me</button>
+</div>
+</body>
+<script>
+let btn = document.getElementById("btnDiv");
+btn.addEventListener("mouseenter" , ()=>{
+    let margin = 500;
+    let marginX =Math.floor(Math.random() * margin);
+    let marginY =Math.floor(Math.random() * margin);
+
+
+    btn.style.marginLeft = marginX +"px" ;
+    btn.style.marginTop = marginY +"px" ;
+})
+</script>
+</html>
